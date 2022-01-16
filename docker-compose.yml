@@ -15,7 +15,7 @@ services:
     #  - './app:/usr/src/app'
     command: ["/usr/src/wait/wait-for-it.sh", "mongo:27017", "--", "nodemon", "server"]
   mongo:
-    image: mongo:latest
+    image: mongo:4.4
     ports:
       - 27017:27017
     environment:

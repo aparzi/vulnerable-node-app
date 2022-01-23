@@ -141,9 +141,9 @@ userRoutes.route('/login').post(function(req, res) {
 		} else {
 			console.log(user);
 			if (user.length >= 1) {
-				var msg = "Logged in as user " + user[0].username + " with role " + user[0].role;
-				console.log('msg => ', msg);
-				res.json(user[0]);
+				var logger = "Logged in as user " + user[0].username + " with role " + user[0].role;
+				console.log('msg => ', logger);
+				res.json({msg: "Login successfully!", user: user[0]});
 			}
 			else
 				res.json({role: "invalid", msg: "Invalid username or password."});
